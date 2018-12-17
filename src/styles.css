@@ -1,0 +1,224 @@
+/*You can add global styles to this file, and also import other style files*/
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+h1 {
+    font: 300 32px 'Lato', arial, sans-serif;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font: 400 24px 'Lato', arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    font: 700 20px 'Lato', arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    font: 700 18px 'Lato', arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    font: italic 700 18px 'Lato', arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  h6 {
+    font: italic 700 16px 'Lato', arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+  em {
+    font-style: italic;
+  }
+  ol {
+    list-style: decimal;
+    padding-left: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+b {
+    font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #fff;
+  color: var(--body-fore-color);
+  font: 400 14px/1.525em 'Lato-Light', arial, sans-serif;
+
+}
+
+h3 {
+	text-align: center;
+}
+
+li > img.myImg{
+	width: 40px;
+	height: auto;
+}
+
+ul > li {
+list-style-type:none;
+}
+
+ul {
+	text-decoration: none;
+	display: inline-block;
+}
+.fa {
+color:white;
+}
+#search {
+	margin-left:0px;
+	margin-top: 0px;
+	width: 100%;
+	text-align: center;
+	box-shadow:none;
+	height:30px;
+	border-radius:2px;
+}
+
+.btn-success {
+	width: 70px;
+	height: 30px;
+	margin-left: 780px;
+  background-color: #aacd4d;
+  margin-top: -50px;
+  border:none;
+  box-shadow: none;
+}
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:visited{
+  background-color: #aacd4d;
+  box-shadow: none;
+  
+}
+/* .myForm{
+    width: 100%;
+}
+.container{
+    text-align: center;
+}
+.form-control{
+    width: 100%;
+} */
+
+.date{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.hDate{
+    margin-left: 35px;
+}
+.gray-btn{
+    margin-left:30px;
+}
+.myBtn{
+    margin-left: 30px;
+    background-color:#5491db;
+}

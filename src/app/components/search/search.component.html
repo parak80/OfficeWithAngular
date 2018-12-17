@@ -1,0 +1,55 @@
+
+<form class="myForm">
+    <h3>Sök i allt</h3>
+    <div class="container">
+		<div class="form-group">
+			<label for="searchIn">Sök i</label>
+			<select name="searchIn" class="form-control" id="searchIn">
+				<option>Alla</option>
+				<option>2</option>
+      </select>
+    </div>
+    <div class="form-group">
+			<label for="status">Status</label>
+			<select name="searchIn" class="form-control" id="status">
+				<option>Alla</option>
+				<option>2</option>
+      </select>
+    </div>
+    <div class="form-group">
+			<label for="direction">Riktning</label>
+			<select name="direction" class="form-control" id="direction">
+				<option>Alla</option>
+				<option>2</option>
+      </select>
+    </div>
+    <div class="form-group">
+			<label for="date">Datumintevall</label>
+      <input type="date" class="date" ng-datepicker ng-options="datepickerOptions" ng-model="date">--
+      <input type="date" class="date" ng-datepicker ng-options="datepickerOptions" ng-model="date">
+      </div>
+      <hr>
+      <div class="form-group">
+        <label for="title-bold">Gå till</label>
+      </div>
+      <div class="form-group">
+        <label for="caseNr">Ärendenummer</label>
+        <input type="date" class="date" ng-datepicker ng-options="datepickerOptions" ng-model="date">
+        <input type="text">
+        <button type="button" class="btn btn-primary myBtn">Öppna</button>
+      </div>
+      <div class="form-group">
+          <label for="dio">Handligs ID</label>
+          <input type="date" class="hDate" ng-datepicker ng-options="datepickerOptions" ng-model="date">
+          <input type="text">
+          <button type="button" class="btn btn-primary myBtn">Öppna</button>
+        </div>
+        <div class="form-group">
+          <label>Senaste</label>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn">Senaste skapade</button>
+          <button type="button" class="btn gray-btn">Senaste Öppnade</button>
+        </div>
+    </div>
+</form>

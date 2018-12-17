@@ -1,0 +1,30 @@
+<div id="content-main">
+  <h3>Essvision Office add-in</h3>
+  <div class="container">
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid d-flex">
+        <div class="form-group">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
+              <img src="assets/images/home-blue.png" class="myImg" />
+              <!--</a>-->
+            </li>
+          </ul>
+          <!--<label for="search"></label>-->
+          <select name="search" id="search" aria-placeholder="Sök i Essvision" class="form-control">
+            <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
+            <option aria-placeholder="iallt">
+              <a routerLink="search" routerLinkActive= "active" (click)="('search')">iallt</a></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button class="btn btn-success">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    </div>
+  
