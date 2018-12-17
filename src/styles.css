@@ -159,6 +159,14 @@ h3 {
   width:40px;
   height: auto;
 }
+.linkBack{
+  text-decoration: underline #5491db !important;
+  z-index: 1;
+  font: inherit;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
 ul > li {
 list-style-type:none;
 }
@@ -185,9 +193,17 @@ color:white;
 	height: 30px;
 	margin-left: 780px;
   background-color: #aacd4d;
-  margin-top: -50px;
+  margin-top: -65px;
   border:none;
   box-shadow: none;
+}
+.everybtn{
+  width: 70px;
+  height: auto;
+  float:right;
+  margin-right: 150px;
+  margin-top: -33px;
+  background-color: transparent !important;
 }
 .btn-success:hover,
 .btn-success:active,

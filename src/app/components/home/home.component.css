@@ -3,6 +3,10 @@
     margin-top: -20px;
     width: 700px;
 }
+.searchAll{
+    float: right;
+  }
+ 
 @media (max-width:900px){
     #search{
         width: 400px;

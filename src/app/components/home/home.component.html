@@ -8,23 +8,25 @@
             <li class="nav-item active">
               <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
               <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
-              <a routerLink="home" routerLinkActive="active" (click)="onGoBack()">
+              <!-- <a routerLink="home" routerLinkActive="active" (click)="onGoBack()"> -->
                 <img src="assets/images/home-blue.png" id="myImg" />
-              </a>
+              <!-- </a> -->
               <!--</a>-->
             </li>
           </ul>
           <!--<label for="search"></label>-->
           <select name="search" id="search" class="form-control">
-            <option aria-placeholder="Sök i Essvision">Sök i Essvision
-            <a routerLink="/search" routerLinkActive= "active" click= onClick()></a></option>
+            
+            <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <button class="btn btn-success">
+          <button type="submit" class="btn everybtn" (click)= onSearch()>Sök iallt</button>
+          <button class="btn btn-success" type="submit">
             <i class="fa fa-search"></i>
           </button>
+          
         </div>
       </div>
     </nav>
