@@ -155,11 +155,10 @@ h3 {
 	text-align: center;
 }
 
-li > img.myImg{
-	width: 40px;
-	height: auto;
+#myImg{
+  width:40px;
+  height: auto;
 }
-
 ul > li {
 list-style-type:none;
 }

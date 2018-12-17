@@ -7,15 +7,17 @@
           <ul class="navbar-nav">
             <li class="nav-item active">
               <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
-              <img src="assets/images/home-blue.png" class="myImg" />
+              <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
+              <a routerLink="home" routerLinkActive="active" (click)="onGoBack()">
+                <img src="assets/images/home-blue.png" id="myImg" />
+              </a>
               <!--</a>-->
             </li>
           </ul>
           <!--<label for="search"></label>-->
-          <select name="search" id="search" aria-placeholder="Sök i Essvision" class="form-control">
-            <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
-            <option aria-placeholder="iallt">
-              <a routerLink="search" routerLinkActive= "active" (click)="('search')">iallt</a></option>
+          <select name="search" id="search" class="form-control">
+            <option aria-placeholder="Sök i Essvision">Sök i Essvision
+            <a routerLink="/search" routerLinkActive= "active" click= onClick()></a></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

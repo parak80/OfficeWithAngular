@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
+import { SearchComponent } from '../search/search.component';
 
 const routes = [
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

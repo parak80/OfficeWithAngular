@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private location: Location,
+    private router: Router
+
+  ) { }
 
   ngOnInit() {
   }
-
+  onGoBack() {
+    this.location.back();
+  }
 }
