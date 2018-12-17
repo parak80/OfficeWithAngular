@@ -16,14 +16,13 @@
           </ul>
           <!--<label for="search"></label>-->
           <select name="search" id="search" class="form-control">
-            
             <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="1">Ärende 1</option>
+            <option value="2">Ärende 2</option>
+            <option value="3">Ärende 3</option>
           </select>
           <button type="submit" class="btn everybtn" (click)= onSearch()>Sök iallt</button>
-          <button class="btn btn-success" type="submit">
+          <button class="btn btn-success" type="submit" (search)="onSearch()">
             <i class="fa fa-search"></i>
           </button>
           

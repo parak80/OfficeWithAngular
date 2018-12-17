@@ -14,28 +14,16 @@ import { Location } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 routerLinkActive;
-// tasks: any[] = [];
-//  myTask: string;
-//  taskEdit: string;
-//  editMode: false;
-//  loading: true;
 
-// createDb() {
+searches = [
+  {id: 1, name: 'ärende 1' },
+  {id: 2, name: 'ärende 2' },
+  {id: 3, name: 'ärende 3' },
+  {id: 4, name: 'ärende 4' },
+  {id: 5, name: 'ärende 5' },
+];
+selectedValue = null;
 
-//   let tasks = [
-//    {
-//      id: 1,
-//      description: “Buy Groceries”
-//    },
-//    {
-//      id: 2,
-//      description: “Paint the garage”
-//    }
-//   ];
-//   return {
-//    tasks: tasks
-//   };
-//  }
   constructor(private router: Router, private location: Location) { }
 
   ngOnInit() {
@@ -44,8 +32,10 @@ routerLinkActive;
   onGoBack() {
     this.location.back();
   }
-  onSearch() {
+  onSearch(value: any) {
     this.router.navigate(['/search']);
+    this.onSearch = value;
+    // this.search(1);
   }
   // onSelect(searchId) {
   //   this.selectedSearch = null;
@@ -54,6 +44,9 @@ routerLinkActive;
   //       this.selectedSearch = this.searches[i];
   //     }
   //   }
+  // }
+  // onSelected(row: Search) {
+  //   this.router.navigate(['searches', row.id] );
   // }
 
 }

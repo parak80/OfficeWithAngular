@@ -7,8 +7,49 @@
     float: right;
   }
  
-@media (max-width:900px){
+@media (max-width:991px){
     #search{
         width: 400px;
+    }
+    .everybtn{
+        margin-right: 200px;
+      }
+      .btn-success {
+        margin-left: 480px;
+    }
+}
+@media (max-width:767px){
+    .everybtn{
+        margin-right: 110px;
+      }
+      .btn-success {
+        margin-left: 460px;
+    }
+}
+@media (max-width:651px){
+    .everybtn{
+        margin-right: 100px;
+      }
+      .btn-success {
+        margin-left: 460px;
+    }
+}
+@media (max-width:612px){
+    #search{
+        width: 300px;
+    }
+    .everybtn{
+        margin-right: 120px;
+      }
+      .btn-success {
+        margin-left: 360px;
+    }
+    @media (max-width:576px)and (min-width:500px){
+        .everybtn{
+            margin-right: 170px;
+          }
+          .btn-success {
+            margin-left: 360px;
+        }
     }
 }

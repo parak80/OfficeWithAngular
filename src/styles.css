@@ -197,6 +197,14 @@ color:white;
   border:none;
   box-shadow: none;
 }
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:visited{
+  background-color: #aacd4d !important;
+  box-shadow: none;
+}
 .everybtn{
   width: 70px;
   height: auto;
@@ -204,14 +212,6 @@ color:white;
   margin-right: 150px;
   margin-top: -33px;
   background-color: transparent !important;
-}
-.btn-success:hover,
-.btn-success:active,
-.btn-success:focus,
-.btn-success:visited{
-  background-color: #aacd4d;
-  box-shadow: none;
-  
 }
 /* .myForm{
     width: 100%;
