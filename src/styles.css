@@ -209,9 +209,16 @@ color:white;
   width: 70px;
   height: auto;
   float:right;
-  margin-right: 150px;
+  margin-right: 320px;
   margin-top: -33px;
   background-color: transparent !important;
+}
+.everybtn:hover,
+.everybtn:active,
+.everybtn:focus,
+.everybtn:visited{
+  box-shadow: none !important;
+  border:none !important;
 }
 /* .myForm{
     width: 100%;
