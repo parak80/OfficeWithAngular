@@ -23,6 +23,10 @@ searches = [
   {id: 5, name: 'ärende 5' },
 ];
 selectedValue = null;
+IsHidden = true;
+onSelect() {
+  this.IsHidden = !this.IsHidden;
+}
 
   constructor(private router: Router, private location: Location) { }
 

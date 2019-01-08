@@ -154,7 +154,10 @@ body {
 h3 {
 	text-align: center;
 }
-
+label{
+  float:none;
+  display: inline-block;
+}
 #myImg{
   width:40px;
   height: auto;
@@ -181,7 +184,7 @@ color:white;
 #search {
 	margin-left:0px;
 	margin-top: 0px;
-	width: 100%;
+	width: 820px;
 	text-align: center;
 	box-shadow:none;
 	height:30px;
@@ -191,7 +194,7 @@ color:white;
 .btn-success {
 	width: 70px;
 	height: 30px;
-	margin-left: 780px;
+	margin-left: 850px;
   background-color: #aacd4d;
   margin-top: -65px;
   border:none;
@@ -209,7 +212,7 @@ color:white;
   width: 70px;
   height: auto;
   float:right;
-  margin-right: 320px;
+  margin-right: 290px;
   margin-top: -33px;
   background-color: transparent !important;
 }
@@ -220,12 +223,17 @@ color:white;
   box-shadow: none !important;
   border:none !important;
 }
-/* .myForm{
-    width: 100%;
+ .myForm{
+  width: 100%;
+  height: auto;
+  border: 1px solid #ced4de;
+  margin-top: -25px;
+  border-radius: 2px;
+  margin-left: 50px;
 }
-.container{
+/* .container{
     text-align: center;
-}
+} 
 .form-control{
     width: 100%;
 } */
