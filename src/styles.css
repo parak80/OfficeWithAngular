@@ -217,13 +217,14 @@ color:white;
   background-color: #aacd4d !important;
   box-shadow: none;
 }
-.everybtn{
+#everybtn{
   width: 70px;
   height: auto;
   float:right;
   margin-right: -30px;
   margin-top: -38px;
   background-color: transparent !important;
+  display: block;
 }
 .everybtn:hover,
 .everybtn:active,
@@ -239,14 +240,12 @@ color:white;
     border-radius: 3px;
     margin-left: 50px;
 }
-/* .container{
-    text-align: center;
-} */
+
 .form-control{
-  display: block;
   width: 50%;
   margin-left: 20px;
   margin-top: 5px;
+  display: inline-block;
 } 
 
 .date{
