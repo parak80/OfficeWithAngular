@@ -197,7 +197,7 @@ color:white;
   	width: 70px;
     height: 30px;
     background-color: #aacd4d;
-    margin-top: -35px;
+    margin-top: -89px;
     border: none;
     box-shadow: none;
     clear: both;
@@ -217,12 +217,12 @@ color:white;
   background-color: #aacd4d !important;
   box-shadow: none;
 }
-#everybtn{
+#everyBtn{
   width: 70px;
   height: auto;
   float:right;
   margin-right: -30px;
-  margin-top: -38px;
+  /* margin-top: -38px; */
   background-color: transparent !important;
   display: block;
 }
