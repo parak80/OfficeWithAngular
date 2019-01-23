@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-sm col-sm-12 col-md-9 col-lg-9">
         <div class="form-group col-sm-12 col-md-12 col-lg-9">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item active sm-none">
               <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
               <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
               <!-- <a routerLink="home" routerLinkActive="active" (click)="onGoBack()"> -->
@@ -21,10 +21,11 @@
             <option value="3">Ärende 3</option>
           </select>
           <button *ngIf="!show" type="submit" class="btn form-group" id="everyBtn" (click)="onSelect()">Sök iallt</button>
-          <button class ="btn btn-success" (click)="getAllTasks()">
+          <button *ngIf="!show" class ="btn btn-success" (click)="getAllTasks()">
             <i class="fa fa-search"></i>
           </button>
           <app-search [hidden]="IsHidden"></app-search>
+          <app-table [hidden]="IsHidden"></app-table>
         </div>
     </nav>
     </div>
