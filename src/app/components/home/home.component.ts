@@ -2,8 +2,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { Location } from '@angular/common';
-
-// import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { AppService } from './app/../../../app.service';
+import { FakeBackendService } from './../../fake-backend.service';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import { Location } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 routerLinkActive;
-
+tasks: any[] = [];
+myTask: string;
 searches = [
   {id: 1, name: 'ärende 1' },
   {id: 2, name: 'ärende 2' },
@@ -28,11 +30,20 @@ onSelect() {
   this.IsHidden = !this.IsHidden;
 }
 
-  constructor(private router: Router, private location: Location) { }
+  constructor(
+    private router: Router,
+    private location: Location,
+    private appservice: AppService
+    ) { }
 
   ngOnInit() {
+    this.getAllTasks();
   }
-
+  getAllTasks() {
+    this.appservice.getTasks().subscribe(data => {
+      this.tasks = data;
+    });
+  }
   onGoBack() {
     this.location.back();
   }

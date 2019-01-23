@@ -7,7 +7,9 @@ import { Location } from '@angular/common';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
+
 export class SearchComponent implements OnInit {
+
   constructor(
     private location: Location,
     private router: Router
@@ -16,6 +18,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
   }
+
   onGoBack() {
     this.location.back();
   }

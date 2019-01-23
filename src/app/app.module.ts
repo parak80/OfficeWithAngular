@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './components/home/home-routing.module';
 import { DateComponent } from './date/date/date.component';
 
+import { AppService } from './app.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeBackendService } from './fake-backend.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +29,11 @@ import { DateComponent } from './date/date/date.component';
     FormsModule,
     CommonModule,
     AppRoutingModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(FakeBackendService)
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
