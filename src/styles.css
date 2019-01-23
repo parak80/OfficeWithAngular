@@ -162,6 +162,8 @@ label{
   width:35px;
   height: auto;
   margin-left: 0px;
+  position: fixed;
+  margin-top: -2px;
 }
 .linkBack{
   text-decoration: underline #5491db !important;
@@ -238,18 +240,26 @@ color:white;
 
 .form-control{
   width: 50%;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-top: 15px;
   display: inline-block;
   max-height: 30px;
 } 
-
+#searchIn{
+  margin-left: 68px;
+}
+#status{
+  margin-left:60px;
+}
 .date{
     margin-left: 20px;
     margin-right: 15px;
 }
 .hDate{
     margin-left: 15px;
+}
+.hDateText{
+  margin-left: 15px;
 }
 .gray-btn{
     margin-left:30px;
@@ -262,7 +272,7 @@ color:white;
 }
 .openBtn2{
   background-color:#5491db;
-  margin-left: 30px;
+  margin-left: 25px;
   box-shadow: none;
   border-color: #5491db;
 }
