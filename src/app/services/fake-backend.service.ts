@@ -8,6 +8,6 @@ export class FakeBackendService implements InMemoryDbService {
             { id: 3, documentId: 'KS2014/42', name: 'search result 3' },
             { id: 4, documentId: 'KS2014/42', name: 'search result 4' }
         ];
-        return tasks;
+        return {tasks};
     }
 }

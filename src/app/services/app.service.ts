@@ -8,14 +8,14 @@ import { FakeBackendService } from './fake-backend.service';
 
 @Injectable()
 export class AppService {
-base_url = 'http://mybackend.com/api/';
-tasks_endpoint = 'tasks';
+base_url = '';
+tasks_endpoint = 'api/tasks';
 constructor(private http: HttpClient) {}
 
     getTasks() {
     return this.http
-    .get(this.base_url + this.tasks_endpoint)
+    .get(this.base_url + this.tasks_endpoint);
     // .map(res => res.json());
-    .pipe(map((response: any) => response.json));
+    // .pipe(map((response: any) => response.json));
     }
 }

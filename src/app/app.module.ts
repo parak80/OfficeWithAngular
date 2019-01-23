@@ -11,10 +11,12 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './components/home/home-routing.module';
 import { DateComponent } from './date/date/date.component';
 
-import { AppService } from './app.service';
+import { AppConfigService } from './services/app-config.service';
+import { AppService } from './services/app.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { FakeBackendService } from './fake-backend.service';
+import { FakeBackendService } from './services/fake-backend.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     AppNavComponent,
     SearchComponent,
-    DateComponent
+    DateComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

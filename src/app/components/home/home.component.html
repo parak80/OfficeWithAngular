@@ -21,7 +21,7 @@
             <option value="3">Ärende 3</option>
           </select>
           <button *ngIf="!show" type="submit" class="btn form-group" id="everyBtn" (click)="onSelect()">Sök iallt</button>
-          <button class ="btn btn-success" (onclick)="getAllTasks()">
+          <button class ="btn btn-success" (click)="getAllTasks()">
             <i class="fa fa-search"></i>
           </button>
           <app-search [hidden]="IsHidden"></app-search>

@@ -1,10 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { Location } from '@angular/common';
-import { AppService } from './app/../../../app.service';
-import { FakeBackendService } from './../../fake-backend.service';
+import { AppService } from '../../services/app.service';
+import { FakeBackendService } from '../../services/fake-backend.service';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { ColumnHeader } from '../../services/app-config.service';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,19 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 })
 export class HomeComponent implements OnInit {
-routerLinkActive;
-tasks: any[] = [];
-myTask: string;
+
+  reverse = false;
+  routerLinkActive;
+  tasks: any[] = [];
+  myTask: string;
+  @Output() setPage: EventEmitter<number> = new EventEmitter();
+  @Input() columnHeaders: ColumnHeader[];
+  @Input() pageSize: number;
+  @Input() dataRows: any[];
+  @Input() total: number;
+  @Input() page: number;
+  @Input() orderBy: string;
+
 searches = [
   {id: 1, name: 'ärende 1' },
   {id: 2, name: 'ärende 2' },
@@ -40,7 +51,8 @@ onSelect() {
     this.getAllTasks();
   }
   getAllTasks() {
-    this.appservice.getTasks().subscribe(data => {
+    this.appservice.getTasks().subscribe((data: any[]) => {
+      console.log(data);
       this.tasks = data;
     });
   }
@@ -51,6 +63,14 @@ onSelect() {
     this.router.navigate(['/search']);
     this.onSearch = value;
     // this.search(1);
+  }
+
+  getSortIcon() {
+    return this.reverse ? 'fa fa-sort-up' : 'fa fa-sort-down';
+  }
+
+  getPage(page: number) {
+    this.setPage.emit(page);
   }
   // onSelect(searchId) {
   //   this.selectedSearch = null;
