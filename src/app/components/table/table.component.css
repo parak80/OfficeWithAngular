@@ -15,8 +15,8 @@ tr td:nth-child(2) {
     -webkit-background-clip: padding;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    padding-right: 50px;
+    padding-right: 30px;
 }
 td{
-    width: 170%;
+    width: 80%;
 }
