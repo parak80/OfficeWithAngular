@@ -15,12 +15,8 @@ import { TableComponent } from '../table/table.component';
 export class HomeComponent implements OnInit {
 
   reverse = false;
-  routerLinkActive;
-  tasks: any[] = [];
-  myTask: string;
-  id: number;
-  name: string;
-  documentId: number;
+  // routerLinkActive;
+
   @Output() setPage: EventEmitter<number> = new EventEmitter();
   @Input() columnHeaders: ColumnHeader[];
   @Input() pageSize: number;
@@ -61,14 +57,8 @@ export class HomeComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.getAllTasks();
   }
-  getAllTasks() {
-    this.appservice.getTasks().subscribe((data: any[]) => {
-      console.log(data);
-      this.tasks = data;
-    });
-  }
+
   onGoBack() {
     this.location.back();
   }
@@ -101,3 +91,4 @@ export class HomeComponent implements OnInit {
   // }
 
 }
+

@@ -148,7 +148,6 @@ body {
   background: #fff;
   color: var(--body-fore-color);
   font: 400 14px/1.525em 'Lato-Light', arial, sans-serif;
-
 }
 
 h3 {
@@ -213,6 +212,9 @@ color:white;
 .navbar{
   max-width: 100%;
 }
+/* .dropdown{
+  border: 1px solid #ced4de;
+} */
 .btn-success:hover,
 .btn-success:active,
 .btn-success:focus,
@@ -245,7 +247,7 @@ color:white;
   margin-top: 15px;
   display: inline-block;
   max-height: 30px;
-} 
+}
 #searchIn{
   margin-left: 68px;
 }
@@ -257,10 +259,14 @@ color:white;
     margin-right: 15px;
 }
 .hDate{
-    margin-left: 15px;
+    margin-left: 35px;
 }
 .hDateText{
   margin-left: 15px;
+}
+.docId{
+  margin-left: 35px;
+  width: 45%;
 }
 .gray-btn{
     margin-left:30px;
@@ -276,4 +282,19 @@ color:white;
   margin-left: 25px;
   box-shadow: none;
   border-color: #5491db;
+}
+.openBtn3{
+  margin-left:20px;
+  background-color:#5491db;
+  box-shadow: none;
+  border-color: #5491db;
+}
+.linkBack{
+  margin-left: 0px;
+  text-decoration: none;
+}
+.onLeft{
+  float: left;
+  margin-top: 5px;
+  margin-right: 5px;
 }

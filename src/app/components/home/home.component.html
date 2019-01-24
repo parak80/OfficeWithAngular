@@ -1,5 +1,5 @@
 <div id="content-main">
-  <h3>Essvision Office add-in</h3>
+  <!-- <h3>Essvision Office add-in</h3> -->
   <div class="container">
     <nav class="navbar navbar-expand-sm col-sm-12 col-md-9 col-lg-9">
         <div class="form-group col-sm-12 col-md-12 col-lg-9">
@@ -8,18 +8,19 @@
               <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
               <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
               <!-- <a routerLink="home" routerLinkActive="active" (click)="onGoBack()"> -->
+                  <a href="/">
                 <img src="assets/images/home-blue.png" id="myImg" />
-                <!-- <a routerLink="/home"></a> -->
+              </a>
               <!-- </a> -->
               <!--</a>-->
             </li>
           </ul>
           <!--<label for="search"></label>-->
           <select name="search" id="search" class="form-control">
-            <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
-            <option value="1" routerLink="home" routerLinkActive= "active">Ärende 1</option>
-            <option value="2">Ärende 2</option>
-            <option value="3">Ärende 3</option>
+            <option aria-placeholder="Sök i Essvision" class="dropdown">Sök i Essvision</option>
+            <option value="1" class="dropdown" routerLink="home">Ärende 1</option>
+            <option value="2" class="dropdown">Ärende 2</option>
+            <option value="3" class="dropdown">Ärende 3</option>
           </select>
           <button *ngIf="!show" type="submit" class="btn form-group" id="everyBtn" (click)="onSelect()">Sök iallt</button>
           <button *ngIf="!show" class ="btn btn-success" (click)="onShowTable()">

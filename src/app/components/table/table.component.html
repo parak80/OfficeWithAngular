@@ -1,13 +1,26 @@
-<form class="form-group myTable">
+<div class="form-group myTable">
+    <table class="table col-sm-12 col-md-9 col-lg-9 table-hover" (click)="openDialog()">
+      <tr class="border-spacing">
+        <th>Name</th>
+        <th>Document ID</th>
+      </tr>
+      <tr *ngFor="let task of tasks let i = index">
+        <td>{{task.name}}</td>
+        <td>{{task.documentId}}</td>
+      </tr>
+    </table>
+  </div>
+
+<!-- <form class="form-group myTable">
   <div class="row col-sm-12 col-md-9 col-lg-9">
     <table class="table col-sm-12 col-md-9 col-lg-9 table-hover">
       <tr class="border-spacing">
         <th>Name</th>
         <th>Document ID</th>
       </tr>
-      <tr class="popupOpen" data-href="#entry1">
-        <td>Ett document</td>
-        <td>KS 2014/42</td>
+      <tr class="popupOpen" href="#entry1" (click)="openDialog()">
+        <td (click)="openDialog()">Ett document</td>
+        <td>KS 2014/s42</td>
       </tr>
       <tr class="popupOpen" data-href="#entry2">
         <td>Ytterliggare ett dokument med ett långt ...</td>
@@ -27,16 +40,7 @@
       </tr>
     </table>
 </div>
-</form>
-  <!-- <table *ngFor="let task of tasks" class="table table-hover">
-  <tr>
-  <th>#</th>
-  <th>Task</th>
-  <th></th>
-  </tr>
-  <tr>
-  <td>{{task.documentId}}</td>
-  <td>
- </td>
-  </tr>
-  </table> -->
+</form> -->
+
+
+
