@@ -9,6 +9,7 @@
               <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
               <!-- <a routerLink="home" routerLinkActive="active" (click)="onGoBack()"> -->
                 <img src="assets/images/home-blue.png" id="myImg" />
+                <!-- <a routerLink="/home"></a> -->
               <!-- </a> -->
               <!--</a>-->
             </li>
@@ -21,11 +22,11 @@
             <option value="3">Ärende 3</option>
           </select>
           <button *ngIf="!show" type="submit" class="btn form-group" id="everyBtn" (click)="onSelect()">Sök iallt</button>
-          <button *ngIf="!show" class ="btn btn-success" (click)="getAllTasks()">
+          <button *ngIf="!show" class ="btn btn-success" (click)="onShowTable()">
             <i class="fa fa-search"></i>
           </button>
           <app-search [hidden]="IsHidden"></app-search>
-          <app-table [hidden]="IsHidden"></app-table>
+          <app-table [hidden]="IsOff"></app-table>
         </div>
     </nav>
     </div>

@@ -1,19 +1,33 @@
-<ul class="task-result">
-  <li>
-    <table *ngFor="let task of tasks">
-      <tr>
-        <th>Serie</th>
-        <th>Element</th>
-        <th>Composition</th>
+<form class="form-group myTable">
+  <div class="row col-sm-12 col-md-9 col-lg-9">
+    <table class="table col-sm-12 col-md-9 col-lg-9 table-hover">
+      <tr class="border-spacing">
+        <th>Name</th>
+        <th>Document ID</th>
       </tr>
-      <tr>
-        <td>{{task.name}}</td>
-        <td>{{task.documentId}}</td>
+      <tr class="popupOpen" data-href="#entry1">
+        <td>Ett document</td>
+        <td>KS 2014/42</td>
       </tr>
-    </table>>
-  </li>
-</ul>
-
+      <tr class="popupOpen" data-href="#entry2">
+        <td>Ytterliggare ett dokument med ett långt ...</td>
+        <td>KS 2014/42</td>
+      </tr>
+      <tr class="popupOpen" data-href="#entry3">
+        <td>LoremLorem LoremLorem Lorem Lorem LoremLorem LoremLorem Lorem Lorem Lorem ...</td>
+        <td>KS 2014/42</td>
+      </tr>
+      <tr class="popupOpen" data-href="#entry4">
+        <td>Lorem</td>
+        <td>KS 2014/42</td>
+      </tr>
+      <tr class="popupOpen" data-href="#entry5">
+        <td>Ett document</td>
+        <td>KS 2014/42</td>
+      </tr>
+    </table>
+</div>
+</form>
   <!-- <table *ngFor="let task of tasks" class="table table-hover">
   <tr>
   <th>#</th>

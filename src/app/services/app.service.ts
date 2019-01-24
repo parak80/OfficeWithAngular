@@ -11,6 +11,9 @@ export class AppService {
 base_url = '';
 tasks_endpoint = 'api/tasks';
 constructor(private http: HttpClient) {}
+id: number;
+documentId: number;
+name: string;
 
     getTasks() {
     return this.http
@@ -18,4 +21,10 @@ constructor(private http: HttpClient) {}
     // .map(res => res.json());
     // .pipe(map((response: any) => response.json));
     }
+
+ createTask(task) {
+    return this.http
+    .post(this.base_url + this.tasks_endpoint, task);
+    // .map(res => res.json());
+ }
 }

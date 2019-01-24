@@ -1,11 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { SearchComponent } from '../search/search.component';
 import { Location } from '@angular/common';
 import { AppService } from '../../services/app.service';
-import { FakeBackendService } from '../../services/fake-backend.service';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { ColumnHeader } from '../../services/app-config.service';
+import { TableComponent } from '../table/table.component';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +18,9 @@ export class HomeComponent implements OnInit {
   routerLinkActive;
   tasks: any[] = [];
   myTask: string;
+  id: number;
+  name: string;
+  documentId: number;
   @Output() setPage: EventEmitter<number> = new EventEmitter();
   @Input() columnHeaders: ColumnHeader[];
   @Input() pageSize: number;
@@ -28,18 +29,30 @@ export class HomeComponent implements OnInit {
   @Input() page: number;
   @Input() orderBy: string;
 
-searches = [
-  {id: 1, name: 'ärende 1' },
-  {id: 2, name: 'ärende 2' },
-  {id: 3, name: 'ärende 3' },
-  {id: 4, name: 'ärende 4' },
-  {id: 5, name: 'ärende 5' },
-];
-selectedValue = null;
-IsHidden = true;
-onSelect() {
-  this.IsHidden = !this.IsHidden;
-}
+  searches = [
+    {id: 1, name: 'ärende 1' },
+    {id: 2, name: 'ärende 2' },
+    {id: 3, name: 'ärende 3' },
+    {id: 4, name: 'ärende 4' },
+    {id: 5, name: 'ärende 5' },
+  ];
+  selectedValue = null;
+  IsHidden = true;
+  IsOff = true;
+  onSelect() {
+    this.IsHidden = !this.IsHidden;
+    if ( this.IsHidden === false) {
+      this.IsOff = true;
+    }
+      return false;
+  }
+  onShowTable() {
+    this.IsOff = !this.IsOff;
+    if ( this.IsOff === false) {
+      this.IsHidden = true;
+    }
+      return false;
+    }
 
   constructor(
     private router: Router,
@@ -59,10 +72,13 @@ onSelect() {
   onGoBack() {
     this.location.back();
   }
+  onGoTable(value: any) {
+    this.router.navigate(['/table']);
+    this.onGoTable = value;
+  }
   onSearch(value: any) {
     this.router.navigate(['/search']);
     this.onSearch = value;
-    // this.search(1);
   }
 
   getSortIcon() {

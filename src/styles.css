@@ -164,6 +164,7 @@ label{
   margin-left: 0px;
   position: fixed;
   margin-top: -2px;
+  cursor: pointer;
 }
 .linkBack{
   text-decoration: underline #5491db !important;
