@@ -1,11 +1,11 @@
 <div class="form-group myTable">
-    <table class="table col-sm-12 col-md-9 col-lg-9 table-hover" (click)="openDialog()">
+    <table class="table col-sm-12 col-md-9 col-lg-9 table-hover">
       <tr class="border-spacing">
         <th>Name</th>
         <th>Document ID</th>
       </tr>
-      <tr *ngFor="let task of tasks let i = index">
-        <td>{{task.name}}</td>
+      <tr *ngFor="let task of tasks let i = index" (click)="openDialog()">
+        <td class="content-column" (click)="select.emit(task)">{{task.name}}</td>
         <td>{{task.documentId}}</td>
       </tr>
     </table>

@@ -1,0 +1,11 @@
+<select #hiddenSelectTag id="hidden" [(ngModel)]="orderColumn">
+  <option >{{display(orderColumn)}}</option>
+</select>
+<div class="row d-sm-none float-right">
+  <span>sortera: </span>
+  <select [(ngModel)]="orderColumn" (ngModelChange)="onOrderBy()" [disabled]="!enabled" [ngStyle]="{'width.px':clientWidth}" >
+    <option *ngFor="let c of columns" [ngValue]="c.prop">{{c.title}}</option>
+  </select>
+  <span (click)="onOrderBy()" class="fa" [ngClass]="reverse ? 'fa-sort-up' : 'fa-sort-down'"></span>
+</div>
+

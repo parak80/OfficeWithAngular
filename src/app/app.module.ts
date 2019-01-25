@@ -19,6 +19,8 @@ import { TableComponent } from './components/table/table.component';
 import { AppConfigService } from './services/app-config.service';
 import { AppService } from './services/app.service';
 import { FakeBackendService } from './services/fake-backend.service';
+import { OrderByComponent } from './components/order-by/order-by.component';
+import { IconColumnComponent } from './components/icon-column/icon-column.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { FakeBackendService } from './services/fake-backend.service';
     SearchComponent,
     DateComponent,
     TableComponent,
+    OrderByComponent,
+    IconColumnComponent,
     // CourseDialogComponent
   ],
   imports: [
