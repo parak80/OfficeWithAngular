@@ -1,12 +1,23 @@
 <div class="form-group myTable">
     <table class="table col-sm-12 col-md-9 col-lg-9 table-hover">
       <tr class="border-spacing">
+        <th class="icon-column"></th>
         <th>Name</th>
         <th>Document ID</th>
+        <span class="fa" [ngClass]="reverse ? 'fa-sort-up' : 'fa-sort-down'">
+        </span>
       </tr>
-      <tr *ngFor="let task of tasks let i = index" (click)="openDialog()">
-        <td class="content-column" (click)="select.emit(task)">{{task.name}}</td>
-        <td>{{task.documentId}}</td>
+      <tr *ngFor="let task of tasks">
+          <td class="icon-column" (click)="select.emit(task)">
+          <app-icon-column [extension]="task.fileExtension"></app-icon-column>
+        <td class="select" (click)="showDialog = !showDialog">
+          <app-dialog></app-dialog>
+          {{task.name}}
+          <!-- (click)="openDialog()" -->
+        </td>
+        <td class="select" (click)="select.emit(task)">
+          {{task.documentId}}
+        </td>
       </tr>
     </table>
   </div>

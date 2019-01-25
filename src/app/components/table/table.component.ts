@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ColumnHeader } from '../../services/app-config.service';
-import { MatDialog, MatDialogConfig} from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { AppService } from '../../services/app.service';
+import { DialogComponent } from './../dialog/dialog.component';
 
 @Component({
   selector: 'app-table',
@@ -14,6 +15,7 @@ export class TableComponent implements OnInit {
   id: number;
   name: string;
   documentId: number;
+  message: string;
 
   orderColumn = '';
   reverse = false;
@@ -25,7 +27,7 @@ export class TableComponent implements OnInit {
   @Input() page: number;
   @Input() orderBy: string;
 
-  @Output() setOrderBy: EventEmitter<string> = new EventEmitter();
+
   @Output() setPage: EventEmitter<number> = new EventEmitter();
   @Output() select: EventEmitter<any> = new EventEmitter();
 
@@ -41,11 +43,11 @@ export class TableComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    // this.dialog.open(CourseDialogComponent, dialogConfig);
+    this.dialog.open(DialogComponent, dialogConfig);
   }
   ngOnInit() {
     this.getAllTasks();
-    if (this.orderBy) {
+    if (this.reverse) {
       const parts = this.orderBy.split(' ');
       this.orderColumn = parts[0];
       this.reverse = parts[1] ===  'asc' || parts[1] ===  'ASC';
@@ -72,9 +74,6 @@ export class TableComponent implements OnInit {
     }
     this.orderColumn = value;
 
-    const orderBy = this.orderColumn + (this.reverse ? ' asc' : ' desc');
-    // console.log(orderBy);
-    this.setOrderBy.emit(orderBy);
   }
   getSortIcon() {
     return this.reverse ? 'fa fa-sort-up' : 'fa fa-sort-down';
