@@ -25,3 +25,17 @@ width: 70px;
 .dialogText{
     margin-top: 5px;
 }
+
+.close:active,
+.close:visited,
+.close:focus{
+    box-shadow: none;
+    border:none;
+    border-color: white !important;
+}
+.myClosebtn:focus{
+    box-shadow: none;
+    border:none !important;
+    border-color: white !important;
+  
+}

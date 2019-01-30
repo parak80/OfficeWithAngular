@@ -7,13 +7,13 @@
         <span class="fa" [ngClass]="reverse ? 'fa-sort-up' : 'fa-sort-down'">
         </span>
       </tr>
-      <tr *ngFor="let task of tasks">
-        <td class="icon-column" (click)="select.emit(task)">
+      <tr *ngFor="let task of tasks" (click)="select.emit(task)">
+        <td class="icon-column" (click)="openDialog()">
           <app-icon-column [extension]="task.fileExtension"></app-icon-column>
         <td class="select" (click)="openDialog()">
           {{task.name}}
         </td>
-        <td class="select" (click)="select.emit(task)">
+        <td class="select" (click)="openDialog()">
           {{task.documentId}}
         </td>
       </tr>
