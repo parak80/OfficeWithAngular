@@ -1,0 +1,13 @@
+/* .custom-toggler.navbar-toggler:active,
+.custom-toggler.navbar-toggler:focus,
+.custom-toggler.navbar-toggler {
+
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+} */
+.dropdown.btn{
+    color: black;
+    position: fixed;
+    margin-top: -10px;
+}

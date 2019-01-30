@@ -29,9 +29,10 @@ export class DialogComponent {
 
     closeDialog() {
       const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose = false;
+      dialogConfig.disableClose = true;
 
       this.dialog.closeAll();
+      // close();
   }
 
   // let dialogRef = dialog.open(DialogComponent, {

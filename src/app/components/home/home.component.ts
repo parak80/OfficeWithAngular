@@ -89,6 +89,8 @@ export class HomeComponent implements OnInit {
   // onSelected(row: Search) {
   //   this.router.navigate(['searches', row.id] );
   // }
-
+  navigate(path: string) {
+    this.router.navigate([path]);
+  }
 }
 

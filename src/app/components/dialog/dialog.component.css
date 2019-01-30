@@ -6,6 +6,10 @@
     overflow:visible;
     display: block;
     border-radius: 2px;
+    margin-left: 400px;
+    margin-top: 200px;
+    background-color:white;
+    font-family: inherit;
 }
 .yesbtn{
 width:70px;

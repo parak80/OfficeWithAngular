@@ -149,7 +149,12 @@ body {
   color: var(--body-fore-color);
   font: 400 14px/1.525em 'Lato-Light', arial, sans-serif;
 }
-
+.container{
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 100px;
+}
 h3 {
 	text-align: center;
 }
