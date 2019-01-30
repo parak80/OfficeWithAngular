@@ -1,0 +1,23 @@
+.myPopup{
+    border:1px solid #ced4de;
+    text-align: center;
+    width:300px;
+    height: 80px;
+    overflow:visible;
+    display: block;
+    border-radius: 2px;
+}
+.yesbtn{
+width:70px;
+margin-left: 20px;
+}
+.nobtn{
+width: 70px;
+/* margin-left: 80px; */
+}
+.mat-dialog-actions .mat-button+.mat-button{
+    margin-left: 80px;
+}
+.dialogText{
+    margin-top: 5px;
+}

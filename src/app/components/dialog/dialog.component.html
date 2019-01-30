@@ -1,8 +1,8 @@
-<!-- <mat-dialog-content>
- <input *ngIf="!show"> Vill du checka ut?
-</mat-dialog-content>
+<div class="container myPopup">
+ <label type="text" *ngIf="!show" aria-readonly="true" class="dialogText">Vill du checka ut dokumentet?</label>
 
 <mat-dialog-actions>
-    <button class="mat-raised-button"(click)="openDialog()">No</button>
-    <button class="mat-raised-button mat-primary"(click)="openDialog()">Yes</button>
-</mat-dialog-actions> -->
+    <button class="mat-button yesbtn"(click)="openDialog()">Ja</button>
+    <button class="mat-button mat-primary nobtn"(click)="closeDialog()">Nej</button>
+</mat-dialog-actions>
+</div>

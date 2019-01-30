@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './components/home/home-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule} from '@angular/material';
+// import { PopupModule } from '@angular/cdk/collections/index';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +22,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { AppConfigService } from './services/app-config.service';
 import { AppService } from './services/app.service';
 import { FakeBackendService } from './services/fake-backend.service';
-
+// import { Mat_DialogData } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,6 @@ import { FakeBackendService } from './services/fake-backend.service';
     TableComponent,
     IconColumnComponent,
     DialogComponent,
-    //  CourseDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +43,7 @@ import { FakeBackendService } from './services/fake-backend.service';
     AppRoutingModule,
     HomeRoutingModule,
     MatDialogModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(FakeBackendService)
   ],

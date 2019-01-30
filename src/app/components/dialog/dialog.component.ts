@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import {MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
+import { validateHorizontalPosition } from '@angular/cdk/overlay';
+// import { Popup } from 'ng2-opd-popup';
 
 @Component({
   selector: 'app-dialog',
@@ -7,14 +9,39 @@ import {MatDialog, MatDialogConfig} from '@angular/material';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent {
-  constructor(private dialog: MatDialog) { }
+  id: number;
+  // selectedOption: string;
+  constructor(
+    public dialog: MatDialog
+    ) {}
 
-    openDialog() {
-
+    openDialog(id: any) {
       const dialogConfig = new MatDialogConfig();
-
       dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
-      this.dialog.open(DialogComponent, dialogConfig);
+
+      this.dialog.open(DialogComponent[id], dialogConfig);
+
+      // let dialogRef = this.dialog.open(DialogComponent);
+      // dialogRef.afterClosed().subscribe(result => {
+      //   this.selectedOption = result;
   }
+
+    closeDialog() {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = false;
+
+      this.dialog.closeAll();
+  }
+
+  // let dialogRef = dialog.open(DialogComponent, {
+  //   height: '400px',
+  //   width: '600px',
+  // });
+  // dialogRef.afterClosed().subscribe(result => {
+  //   console.log(`Dialog result: ${result}`);
+  // });
+
+  // dialogRef.close();
+
 }

@@ -36,14 +36,16 @@ export class TableComponent implements OnInit {
   }
   constructor(
     private dialog: MatDialog,
-    private appservice: AppService
+    private appservice: AppService,
     ) { }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
+
     this.dialog.open(DialogComponent, dialogConfig);
+
   }
   ngOnInit() {
     this.getAllTasks();

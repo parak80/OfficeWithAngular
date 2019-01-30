@@ -8,12 +8,10 @@
         </span>
       </tr>
       <tr *ngFor="let task of tasks">
-          <td class="icon-column" (click)="select.emit(task)">
+        <td class="icon-column" (click)="select.emit(task)">
           <app-icon-column [extension]="task.fileExtension"></app-icon-column>
-        <td class="select" (click)="showDialog = !showDialog">
-          <app-dialog></app-dialog>
+        <td class="select" (click)="openDialog()">
           {{task.name}}
-          <!-- (click)="openDialog()" -->
         </td>
         <td class="select" (click)="select.emit(task)">
           {{task.documentId}}
