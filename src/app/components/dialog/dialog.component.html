@@ -1,0 +1,11 @@
+<div class="container myPopup">
+    <button type="button" class="close" aria-label="Close" (click)="closeDialog()">
+        <span aria-hidden="true" class="myClosebtn">&times;</span>
+    </button>
+ <label type="text" *ngIf="!show" aria-readonly="true" class="dialogText">Vill du checka ut dokumentet?</label>
+
+<mat-dialog-actions>
+    <button class="mat-button yesbtn"(click)="openDialog()">Ja</button>
+    <button class="mat-button mat-primary nobtn"(click)="closeDialog()">Nej</button>
+</mat-dialog-actions>
+</div>

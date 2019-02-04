@@ -1,0 +1,52 @@
+.myTable{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #ced4de; */
+    border-radius: 3px;
+    margin-left: 30px;
+    padding-left: 25px;
+    /* margin-top: -50px; */
+    overflow: hidden;
+}
+.border-spacing{
+    padding-bottom: 5em;
+    font-weight: bold;
+}
+tr td:nth-child(2) {
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    padding-right: 30px;
+}
+td{
+    width: 80%;
+}
+.icon-column {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    cursor: pointer;
+}
+.select {
+    cursor: pointer;
+    max-width:100px;
+}
+
+thead th {
+    cursor: pointer;
+    /* margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 400; */
+}
+.glyph-column {
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+}
+.content-column {
+    word-wrap: break-word;
+    cursor: pointer;
+    overflow: hidden;
+}

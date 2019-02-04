@@ -1,33 +1,54 @@
 <div id="content-main">
-  <h3>Essvision Office add-in</h3>
+  <!-- <h3>Essvision Office add-in</h3> -->
   <div class="container">
-    <nav class="navbar navbar-expand-sm">
-      <div class="container-fluid d-flex">
-        <div class="form-group">
-          <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-sm col-sm-12 col-md-9 col-lg-9">
+        <div class="form-group col-sm-12 col-md-12 col-lg-9">
+
+    <button class="dropdown btn" type="button" data-toggle="collapse" data-target="#appNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>                   
+    </button>
+      
+    <div class="collapse navbar-collapse" id="appNavbar">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-              <!--<a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive="active">-->
-              <!-- <img src="assets/images/home-blue.png" class="myImg" /> -->
-              <!-- <a routerLink="home" routerLinkActive="active" (click)="onGoBack()"> -->
+                <!-- <a class="nav-link d-none d-sm-block" routerLink="home" routerLinkActive= "active"><i class="fa fa-home"></i></a> -->
+                <a class="nav-link d-block d-sm-none" href="#appNavbar" data-toggle="collapse" (click)="navigate('home')"><i class="fa fa-home"></i></a>
+              </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link d-none d-sm-block" routerLink="documents" routerLinkActive= "active">Handlingar</a> -->
+            <a class="nav-link d-block d-sm-none" href="#appNavbar" data-toggle="collapse">Handlingar</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link d-none d-sm-block" routerLink="cases" routerLinkActive= "active">Ärenden</a> -->
+            <a class="nav-link d-block d-sm-none" href="#appNavbar" data-toggle="collapse">Ärenden</a>
+          </li>
+        </ul>
+      </div>
+
+          <!-- <ul class="navbar-nav">
+            <li class="nav-item active sm-none">
+              <a href="/">
                 <img src="assets/images/home-blue.png" id="myImg" />
-              <!-- </a> -->
-              <!--</a>-->
+              </a>
+              
             </li>
-          </ul>
+          </ul> -->
+
+
           <!--<label for="search"></label>-->
           <select name="search" id="search" class="form-control">
-            <option aria-placeholder="Sök i Essvision">Sök i Essvision</option>
-            <option value="1">Ärende 1</option>
-            <option value="2">Ärende 2</option>
-            <option value="3">Ärende 3</option>
+            <option aria-placeholder="Sök i Essvision" class="dropdown">Sök i Essvision</option>
+            <option value="1" class="dropdown" routerLink="home">Ärende 1</option>
+            <option value="2" class="dropdown">Ärende 2</option>
+            <option value="3" class="dropdown">Ärende 3</option>
           </select>
-          <button type="submit" class="btn everybtn" (click)= onSearch()>Sök iallt</button>
-          <button class="btn btn-success" type="submit" (search)="onSearch()">
+          <button *ngIf="!show" type="submit" class="btn form-group" id="everyBtn" (click)="onSelect()">Sök iallt</button>
+          <button *ngIf="!show" class ="btn btn-success" (click)="onShowTable()">
             <i class="fa fa-search"></i>
           </button>
-          
+          <app-search [hidden]="IsHidden"></app-search>
+          <app-table [hidden]="IsOff"></app-table>
         </div>
-      </div>
     </nav>
     </div>
   

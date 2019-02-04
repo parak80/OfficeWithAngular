@@ -1,0 +1,41 @@
+.myPopup{
+    border:1px solid #ced4de;
+    text-align: center;
+    width:300px;
+    height: 80px;
+    overflow:visible;
+    display: block;
+    border-radius: 2px;
+    margin-left: 400px;
+    margin-top: 200px;
+    background-color:white;
+    font-family: inherit;
+}
+.yesbtn{
+width:70px;
+margin-left: 20px;
+}
+.nobtn{
+width: 70px;
+/* margin-left: 80px; */
+}
+.mat-dialog-actions .mat-button+.mat-button{
+    margin-left: 80px;
+}
+.dialogText{
+    margin-top: 5px;
+}
+
+.close:active,
+.close:visited,
+.close:focus{
+    box-shadow: none;
+    border:none;
+    border-color: white !important;
+}
+.myClosebtn:focus{
+    box-shadow: none;
+    border:none !important;
+    border-color: white !important;
+  
+}

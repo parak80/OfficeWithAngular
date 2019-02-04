@@ -1,94 +1,13 @@
-#search{
-    margin-left: 50px;
-    margin-top: -20px;
-    width: 700px;
-}
-.searchAll{
-    float: right;
-  }
- 
-@media (max-width:991px){
-    #search{
-        width: 400px;
-    }
-    .everybtn{
-        margin-right: 200px;
-      }
-      .btn-success {
-        margin-left: 480px;
-    }
-}
-@media (min-width:768px) and (max-width:1024px) {
-    #search{
-        width:500px;
-    }
-    .everybtn{
-        margin-right: 110px;
-      }
-      .btn-success {
-        margin-left: 560px;
-    }
-}
-/* @media (max-width:651px){
-    .everybtn{
-        margin-right: 100px;
-      }
-      .btn-success {
-        margin-left: 460px;
-    }
+/* .custom-toggler.navbar-toggler:active,
+.custom-toggler.navbar-toggler:focus,
+.custom-toggler.navbar-toggler {
+
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
 } */
-@media (max-width:640px) and (min-width:360px){
-    #search{
-        width: 260px;
-        margin-left:35px;
-    }
-    .everybtn{
-        margin-right: 80px !important;
-      }
-      .btn-success {
-        margin-left: 260px !important;
-        width: 60px;
-    }
-    #myImg{
-        margin-left:-20px;
-    }
-
-    /* @media (max-width:612px){
-        #search{
-            width: 300px;
-        }
-        .everybtn{
-            margin-right: 120px;
-          }
-          .btn-success {
-            margin-left: 360px;
-        } */
-
-    @media (max-width:576px)and (min-width:500px){
-        .everybtn{
-            margin-right: 170px;
-          }
-          .btn-success {
-            margin-left: 360px;
-        }
-    }
-    @media (max-width:640px) and (min-width:360px){
-        #search{
-            width: 220px;
-        }
-        .everybtn{
-            margin-right: 100px;
-        }
-    }
-    @media (max-width:673px) and (min-width:400px){
-        .everybtn{
-            margin-right: 100px !important;
-        }
-        #search{
-            width: 250px;
-        }
-        .btn-success{
-            margin-left: 300px !important;
-        }
-    }
+.dropdown.btn{
+    color: black;
+    position: fixed;
+    margin-top: -10px;
 }
